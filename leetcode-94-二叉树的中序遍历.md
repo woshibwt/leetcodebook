@@ -21,7 +21,7 @@ mathjax: true
 
 ## 递归法
 首先最简单的方法当然是递归：
-```
+```java
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         List <Integer> res = new ArrayList<>();

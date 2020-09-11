@@ -4,14 +4,13 @@
     "description" : "我第一本书的描述，很好",
     "language" : "zh-hans",
     "structure": {
-        "readme": "introduction.md"
     },
     "plugins": [
         "-lunr",
         "-search",
         "search-pro",
         "back-to-top-button",
-		"mathjax"
+		"katex"
     ],
     "pluginsConfig": {
         "anchor-navigation-ex": {
