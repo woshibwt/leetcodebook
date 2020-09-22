@@ -46,5 +46,5 @@ class Solution {
 
 注意到该题中使用了类型最小值来作为curr变量的初始值，最常使用到的是Integer类型下的MAX和MIN,格式为```Integer.Max_VALUE,Integer.MIN_VALUE```
 ![](https://bwtpicturehouse.oss-cn-shanghai.aliyuncs.com/img/最大最小值.PNG)
-        而测试用例中（69/75）使用了[-2147483648]，是MIN_VALUE的值,导致了无法通过。因此初始值开到了Long.MIN_VALUE,不同类型下MAX和MIN格式是相同的
+        而测试用例中（69/75）使用了[-2147483648]，是MIN_VALUE的值,导致了无法通过。因此初始值开到了Long.MIN_VALUE,不同类型下MAX和MIN格式是相通的
 
