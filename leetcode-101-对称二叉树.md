@@ -34,4 +34,23 @@
 >
 > 写着写着。。。你就发现你写出来了。。。
 
+```java
+class Solution {
+        public boolean isSymmetric(TreeNode root) {
+        if(root == null) return true;
+        return helper(root.left,root.right);
+    }
+    public boolean helper(TreeNode left,TreeNode right){
+         if(left == null && right == null)
+            return true;
+        else if(left==null || right == null)
+            return false;
+        else if(left.val != right.val)
+            return false;
+
+        return helper(left.left,right.right) && helper(left.right,right.left);
+    }
+}
+```
+
 注意这种思路下要跳出原来只给一个参数的局限，坚决定义辅助函数
