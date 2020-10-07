@@ -1,0 +1,505 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>leetcode102，103，107 二叉树的层次遍历组题 · 我的一本书</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="biwentao">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="leetcode-105,106-重建二叉树.html" />
+    
+    
+    <link rel="prev" href="leetcode-101-对称二叉树.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.baidu.com" target="_blank" class="custom-link">个性链接1</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.baidu.com" target="_blank" class="custom-link">个性链接2</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="leetcode-94-二叉树的中序遍历.html">
+            
+                <a href="leetcode-94-二叉树的中序遍历.html">
+            
+                    
+                    leetcode94 二叉树的中序遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="leetcode-95-不同的二叉搜索树 II.html">
+            
+                <a href="leetcode-95-不同的二叉搜索树 II.html">
+            
+                    
+                    leetcode95 不同的二叉搜索树 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="leetcode-96-不同的二叉搜索树.html">
+            
+                <a href="leetcode-96-不同的二叉搜索树.html">
+            
+                    
+                    leetcode96 不同的二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="leetcode-98-验证二叉搜索树.html">
+            
+                <a href="leetcode-98-验证二叉搜索树.html">
+            
+                    
+                    leetcode98 验证二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="leetcode-100-相同的树.html">
+            
+                <a href="leetcode-100-相同的树.html">
+            
+                    
+                    leetcode100 相同的树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="leetcode-101-对称二叉树.html">
+            
+                <a href="leetcode-101-对称二叉树.html">
+            
+                    
+                    leetcode101 对称二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.7" data-path="leetcode-102，103，107-二叉树的层次遍历组题.html">
+            
+                <a href="leetcode-102，103，107-二叉树的层次遍历组题.html">
+            
+                    
+                    leetcode102，103，107 二叉树的层次遍历组题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="leetcode-105,106-重建二叉树.html">
+            
+                <a href="leetcode-105,106-重建二叉树.html">
+            
+                    
+                    leetcode-105,106 重建二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="leetcode-701-二叉搜索树中的插入操作.html">
+            
+                <a href="leetcode-701-二叉搜索树中的插入操作.html">
+            
+                    
+                    leetcode701 二叉搜索树中的插入操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >leetcode102，103，107 二叉树的层次遍历组题</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>leetcode 102,103,107&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x9053;&#x9898;&#xFF0C;&#x6545;&#x653E;&#x5728;&#x4E00;&#x8D77;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x8BF7;&#x4F60;&#x8FD4;&#x56DE;&#x5176;&#x6309; <strong>&#x5C42;&#x5E8F;&#x904D;&#x5386;</strong> &#x5F97;&#x5230;&#x7684;&#x8282;&#x70B9;&#x503C;&#x3002; &#xFF08;&#x5373;&#x9010;&#x5C42;&#x5730;&#xFF0C;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x8282;&#x70B9;&#xFF09;&#x3002;</p>
+<h1 id="leetcode-102">leetcode 102</h1>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<p>&#x4E8C;&#x53C9;&#x6811;&#xFF1A;<code>[3,9,20,null,null,15,7]</code></p>
+<p><img src="https://bwtpicturehouse.oss-cn-shanghai.aliyuncs.com/img/20200925085256.png" alt=""></p>
+<p>&#x8FD4;&#x56DE;&#x5176;&#x5C42;&#x6B21;&#x904D;&#x5386;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="https://bwtpicturehouse.oss-cn-shanghai.aliyuncs.com/img/20200925085659.png" alt=""></p>
+<h2 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h2>
+<p>&#x5F88;&#x5178;&#x578B;&#x7684;bfs&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;bfs&#x7684;&#x6A21;&#x677F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bfs</span><span class="hljs-params">(TreeNode root)</span> </span>{
+    Queue&lt;TreeNode&gt; queue = <span class="hljs-keyword">new</span> ArrayDeque&lt;&gt;();
+    queue.add(root);
+    <span class="hljs-keyword">while</span> (!queue.isEmpty()) {
+        TreeNode node = queue.poll(); <span class="hljs-comment">// Java &#x7684; pop &#x5199;&#x4F5C; poll()</span>
+        <span class="hljs-keyword">if</span> (node.left != <span class="hljs-keyword">null</span>) {
+            queue.add(node.left);
+        }
+        <span class="hljs-keyword">if</span> (node.right != <span class="hljs-keyword">null</span>) {
+            queue.add(node.right);
+        }
+    }
+}
+</code></pre>
+<p>&#x800C;&#x5BF9;&#x4E8E;&#x8FD9;&#x9053;&#x9898;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6BCF;&#x4E00;&#x5C42;&#x904D;&#x5386;&#x5F00;&#x59CB;&#x524D;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x6765;&#x8BB0;&#x5F55;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6570;&#x91CF;n(&#x5BF9;&#x5E94;&#x8FD9;&#x4E00;&#x5C42;&#x7684;&#x8282;&#x70B9;&#x6570;&#x91CF;)&#xFF0C;&#x7136;&#x540E;&#x4E00;&#x53E3;&#x6C14;&#x5904;&#x7406;&#x5B8C;&#x8FD9;&#x4E00;&#x5C42;&#x7684;n&#x4E2A;&#x8282;&#x70B9;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) {
+    List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    Queue&lt;TreeNode&gt; queue = <span class="hljs-keyword">new</span> ArrayDeque&lt;&gt;();
+    <span class="hljs-keyword">if</span> (root != <span class="hljs-keyword">null</span>) {
+        queue.add(root);
+    }
+    <span class="hljs-keyword">while</span> (!queue.isEmpty()) {
+        <span class="hljs-keyword">int</span> n = queue.size();
+        List&lt;Integer&gt; level = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) { 
+            TreeNode node = queue.poll();
+            level.add(node.val);
+            <span class="hljs-keyword">if</span> (node.left != <span class="hljs-keyword">null</span>) {
+                queue.add(node.left);
+            }
+            <span class="hljs-keyword">if</span> (node.right != <span class="hljs-keyword">null</span>) {
+                queue.add(node.right);
+            }
+        }
+        res.add(level);
+    }
+
+    <span class="hljs-keyword">return</span> res;
+}
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x6CE8;&#x610F;&#x5728;&#x6BCF;&#x4E00;&#x8F6E;&#x904D;&#x5386;&#x524D;&#x90FD;&#x8981;&#x5C06;list&#x6E05;&#x7A7A;</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x8282;&#x70B9;&#x503C;&#x7684;&#x952F;&#x9F7F;&#x5F62;&#x5C42;&#x6B21;&#x904D;&#x5386;&#x3002;&#xFF08;&#x5373;&#x5148;&#x4ECE;&#x5DE6;&#x5F80;&#x53F3;&#xFF0C;&#x518D;&#x4ECE;&#x53F3;&#x5F80;&#x5DE6;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x5C42;&#x904D;&#x5386;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;&#x5C42;&#x4E0E;&#x5C42;&#x4E4B;&#x95F4;&#x4EA4;&#x66FF;&#x8FDB;&#x884C;&#xFF09;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;
+&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x6811; [3,9,20,null,null,15,7]</p>
+<p><img src="https://bwtpicturehouse.oss-cn-shanghai.aliyuncs.com/img/20201006142104.png" alt=""></p>
+<p>&#x8FD4;&#x56DE;&#x952F;&#x9F7F;&#x5F62;&#x5C42;&#x6B21;&#x904D;&#x5386;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://bwtpicturehouse.oss-cn-shanghai.aliyuncs.com/img/20201006142159.png" alt=""></p>
+<h1 id="leetcode-103">leetcode 103</h1>
+<h2 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;">&#x89E3;&#x9898;&#x601D;&#x8DEF;</h2>
+<p>&#x4E0E;<a href="leetcode-102-&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x5C42;&#x6B21;&#x904D;&#x5386;.md">leetcode 102&#x9898;</a>&#x672C;&#x8D28;&#x4E0A;&#x76F8;&#x540C;&#xFF0C;&#x53EA;&#x662F;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x6807;&#x5FD7;&#x4F4D;flag,&#x6BCF;&#x6B21;&#x7FFB;&#x8F6C;&#x6765;&#x5F71;&#x54CD;&#x8282;&#x70B9;&#x5165;list&#x7684;&#x987A;&#x5E8F;</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) {
+        List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        List&lt;Integer&gt; list = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">if</span>(root==<span class="hljs-keyword">null</span>){
+            <span class="hljs-keyword">return</span> res;
+        }
+        <span class="hljs-keyword">int</span> flag = <span class="hljs-number">1</span>;
+        Queue&lt;TreeNode&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
+        queue.offer(root);
+        <span class="hljs-keyword">while</span>(!queue.isEmpty()){
+            <span class="hljs-keyword">int</span> size = queue.size();
+            list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+            <span class="hljs-keyword">while</span>(flag==<span class="hljs-number">1</span> &amp;&amp; size&gt;<span class="hljs-number">0</span>){
+                TreeNode curr = queue.poll();
+                list.add(curr.val);
+                <span class="hljs-keyword">if</span>(curr.left!=<span class="hljs-keyword">null</span>){
+                    queue.offer(curr.left);
+                }
+                <span class="hljs-keyword">if</span>(curr.right!=<span class="hljs-keyword">null</span>){
+                    queue.offer(curr.right);
+                }
+                size --;
+            }
+            <span class="hljs-keyword">while</span>(flag==-<span class="hljs-number">1</span> &amp;&amp; size&gt;<span class="hljs-number">0</span>){
+                TreeNode curr = queue.poll();
+                list.add(<span class="hljs-number">0</span>,curr.val);
+                <span class="hljs-keyword">if</span>(curr.left!=<span class="hljs-keyword">null</span>){
+                    queue.offer(curr.left);
+                }
+                <span class="hljs-keyword">if</span>(curr.right!=<span class="hljs-keyword">null</span>){
+                    queue.offer(curr.right);
+                }
+                size --;
+
+            }
+            res.add(list);
+            flag *= -<span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">return</span> res;
+
+    }
+}
+</code></pre>
+<h1 id="leetcode-107">leetcode 107</h1>
+<p>&#x89E3;&#x9898;&#x601D;&#x8DEF; &#x548C;&#x4E4B;&#x524D;&#x51E0;&#x4E4E;&#x4E00;&#x81F4;&#xFF0C;&#x5C31;&#x662F;&#x5728;list&#x63D2;&#x5165;res&#x65F6;&#x4ECE;&#x5934;&#x90E8;&#x63D2;&#x5165;</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; levelOrderBottom(TreeNode root) {
+        List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">if</span>(root==<span class="hljs-keyword">null</span>){
+            <span class="hljs-keyword">return</span> res;
+        }
+        List&lt;Integer&gt; list = <span class="hljs-keyword">null</span>;
+        Queue&lt;TreeNode&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
+        queue.offer(root);
+        <span class="hljs-keyword">while</span>(!queue.isEmpty()){
+            <span class="hljs-keyword">int</span> size = queue.size();
+            list = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
+            <span class="hljs-keyword">while</span>(size&gt;<span class="hljs-number">0</span>){
+                TreeNode curr = queue.poll();
+                list.add(curr.val);
+                <span class="hljs-keyword">if</span>(curr.left!=<span class="hljs-keyword">null</span>){
+                    queue.offer(curr.left);
+                }
+                <span class="hljs-keyword">if</span>(curr.right!=<span class="hljs-keyword">null</span>){
+                    queue.offer(curr.right);
+                }
+                size --;
+            }
+            res.add(<span class="hljs-number">0</span>,list);
+        }
+        <span class="hljs-keyword">return</span> res;
+
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="leetcode-101-对称二叉树.html" class="navigation navigation-prev " aria-label="Previous page: leetcode101 对称二叉树">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="leetcode-105,106-重建二叉树.html" class="navigation navigation-next " aria-label="Next page: leetcode-105,106 重建二叉树">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"leetcode102，103，107 二叉树的层次遍历组题","level":"1.1.7","depth":2,"next":{"title":"leetcode-105,106 重建二叉树","level":"1.1.8","depth":2,"path":"leetcode-105,106-重建二叉树.md","ref":"leetcode-105,106-重建二叉树.md","articles":[]},"previous":{"title":"leetcode101 对称二叉树","level":"1.1.6","depth":2,"path":"leetcode-101-对称二叉树.md","ref":"leetcode-101-对称二叉树.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","back-to-top-button","katex"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"anchor-navigation-ex":{"isShowTocTitleIcon":true},"search-pro":{},"back-to-top-button":{},"katex":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"biwentao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"我的一本书","language":"zh-hans","links":{"sidebar":{"个性链接1":"https://www.baidu.com","个性链接2":"https://www.baidu.com"}},"gitbook":"*","description":"我第一本书的描述，很好"},"file":{"path":"leetcode-102，103，107-二叉树的层次遍历组题.md","mtime":"2020-10-07T04:02:50.438Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-07T04:11:25.653Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
